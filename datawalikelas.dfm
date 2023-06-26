@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 192
-  Top = 125
+  Left = 201
+  Top = 295
   Width = 870
   Height = 450
   Caption = 'Form1'
@@ -189,5 +189,24 @@ object Form1: TForm1
     TitleFont.Height = -11
     TitleFont.Name = 'MS Sans Serif'
     TitleFont.Style = []
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Params = <>
+    Left = 712
+    Top = 104
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    Left = 712
+    Top = 144
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cGET_ACP
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    Port = 0
+    Left = 712
+    Top = 72
   end
 end

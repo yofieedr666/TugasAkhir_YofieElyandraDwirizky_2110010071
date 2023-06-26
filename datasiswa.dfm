@@ -272,6 +272,7 @@ object Form2: TForm2
       Top = 272
       Width = 545
       Height = 113
+      DataSource = DataSource1
       TabOrder = 18
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
@@ -279,5 +280,33 @@ object Form2: TForm2
       TitleFont.Name = 'MS Sans Serif'
       TitleFont.Style = []
     end
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cGET_ACP
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'data_siswa'
+    User = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 'C:\Users\USER\OneDrive\Documents\Visual2\TugasAkhir\libmysql.dll'
+    Left = 656
+    Top = 64
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'select * from datasiswa')
+    Params = <>
+    Left = 664
+    Top = 112
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    Left = 696
+    Top = 176
   end
 end
